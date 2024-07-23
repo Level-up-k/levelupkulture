@@ -1,0 +1,73 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4b0082, #d3d3d3);
+    color: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no scrollbars appear */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    position: relative; /* Ensure it sits above the collage */
+    z-index: 2; /* Ensures the text is above the collage */
+}
+
+.banner-message {
+    margin-bottom: 20px;
+}
+
+marquee {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+.message h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.message p {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* Background Collage */
+.background-collage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensures it sits below the text container */
+    overflow: hidden; /* Ensure no scrollbars appear */
+}
+
+.background-collage img {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    opacity: 0.3;
+    mix-blend-mode: lighten; /* This blends images for a cohesive look */
+}
+
+/* Position images to create a collage */
+img:nth-child(1) { top: 10%; left: 10%; }
+img:nth-child(2) { top: 50%; left: 20%; }
+img:nth-child(3) { top: 30%; left: 60%; }
+img:nth-child(4) { top: 70%; left: 70%; }
+img:nth-child(5) { top: 0%; left: 80%; }
+img:nth-child(6) { top: 90%; left: 40%; }
